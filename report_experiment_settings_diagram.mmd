@@ -1,0 +1,36 @@
+%% Report-ready high-level experiment settings diagram for all three CPS case studies.
+flowchart LR
+    classDef domain fill:#f8fafc,stroke:#334155,stroke-width:1.5px,color:#111827
+    classDef protocol fill:#eef2ff,stroke:#4f46e5,stroke-width:1.5px,color:#111827
+    classDef systems fill:#ecfeff,stroke:#0891b2,stroke-width:1.5px,color:#111827
+    classDef metrics fill:#fffbeb,stroke:#b45309,stroke-width:1.5px,color:#111827
+
+    T["Paired trial design<br/><br/>Trusted state is held fixed.<br/>A clean command and an adversarial variant are run separately.<br/>Both outputs are scored against the same ground-truth privileged action."]:::protocol
+
+    subgraph C["Case-study settings"]
+        R["Robot motion control<br/><b>Actions:</b> continue, halt, reroute, request confirmation<br/><b>State:</b> role, mode, estop, path blocked, allowed routes"]:::domain
+        V["Industrial valve control<br/><b>Actions:</b> open, close, hold, vent, request confirmation<br/><b>State:</b> role, pressure, shutdown, leak, lock, authorized valves"]:::domain
+        B["Building access control<br/><b>Actions:</b> grant access, deny, lockdown, evacuate, request confirmation<br/><b>State:</b> role, badge, alarms, lockdown, zone authorization"]:::domain
+    end
+
+    subgraph S["Systems compared"]
+        S1["ABCI<br/>parser + validator + decision"]:::systems
+        S2["Deterministic policy<br/>grammar rules, no model"]:::systems
+        S3["LLM assist<br/>model proposal + rule approval"]:::systems
+        S4["Direct decision<br/>model selects final action"]:::systems
+        S5["Role separated<br/>trusted-state priority prompt"]:::systems
+        S6["Schema constrained<br/>structured output prompt"]:::systems
+        M["Model settings<br/>Model-backed variants use four 1B-class instruction models.<br/>Models are warmed up before timed evaluation."]:::systems
+    end
+
+    A["Attack families<br/><br/>direct override<br/>role confusion<br/>indirect injection<br/>compositional multi-field attacks<br/>adaptive attacks"]:::metrics
+
+    K["Reported measures<br/><br/>clean accuracy<br/>adversarial accuracy<br/>attack error rate (AER)<br/>policy-action flip rate (PAFR)<br/>safe reject rate<br/>hazard transition rate (HTR)<br/>median latency"]:::metrics
+
+    I["Interpretation<br/><br/>A robust system preserves the intended action under attack while avoiding unsafe privileged actions."]:::metrics
+
+    T --> C
+    C --> S
+    S --> A
+    A --> K
+    K --> I

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1180" viewBox="0 0 1900 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Experimental Settings Across CPS Case Studies</title>
+  <desc id="desc">Report-ready overview of experimental settings for robot, valve, and building CPS tasks, including paired clean/adversarial trials, compared systems, attack families, and reported measures.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title { font: 700 38px Inter, Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 18px Inter, Segoe UI, Arial, sans-serif; fill: #475569; }
+      .panel-title { font: 700 22px Inter, Segoe UI, Arial, sans-serif; fill: #111827; }
+      .card-title { font: 700 18px Inter, Segoe UI, Arial, sans-serif; fill: #111827; }
+      .label { font: 700 13px Inter, Segoe UI, Arial, sans-serif; fill: #475569; letter-spacing: 0.5px; }
+      .body { font: 400 15px Inter, Segoe UI, Arial, sans-serif; fill: #1f2937; }
+      .small { font: 400 13px Inter, Segoe UI, Arial, sans-serif; fill: #334155; }
+      .tiny { font: 400 12px Inter, Segoe UI, Arial, sans-serif; fill: #475569; }
+      .pill { font: 600 13px Inter, Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .num { font: 700 13px Inter, Segoe UI, Arial, sans-serif; fill: #ffffff; }
+      .arrow { stroke: #334155; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1900" height="1180" fill="#ffffff"/>
+  <text x="70" y="66" class="title">Experimental Settings Across CPS Case Studies</text>
+  <text x="70" y="101" class="subtitle">The same paired clean/adversarial evaluation is applied to robot motion, valve control, and building access-control tasks.</text>
+
+  <!-- Top explanatory strip -->
+  <rect x="70" y="135" width="1760" height="160" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="105" y="176" class="panel-title">Paired Trial Design</text>
+  <text x="105" y="207" class="body">A trial fixes the case-study trusted state and compares the system response to a clean command and its adversarial variant.</text>
+
+  <rect x="115" y="228" width="260" height="42" rx="21" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.2"/>
+  <text x="145" y="254" class="pill">trusted state held fixed</text>
+  <path class="arrow" d="M390 249 L500 249"/>
+
+  <rect x="515" y="216" width="255" height="65" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.4"/>
+  <text x="542" y="243" class="card-title">Clean command</text>
+  <text x="542" y="266" class="small">ordinary operator request</text>
+
+  <rect x="805" y="216" width="255" height="65" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.4"/>
+  <text x="832" y="243" class="card-title">Adversarial command</text>
+  <text x="832" y="266" class="small">same task with attack text</text>
+
+  <path class="arrow" d="M1080 249 L1195 249"/>
+  <rect x="1210" y="216" width="245" height="65" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.4"/>
+  <text x="1238" y="243" class="card-title">System outputs</text>
+  <text x="1238" y="266" class="small">privileged action for each input</text>
+
+  <path class="arrow" d="M1475 249 L1585 249"/>
+  <rect x="1600" y="216" width="185" height="65" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.4"/>
+  <text x="1627" y="243" class="card-title">Scoring</text>
+  <text x="1627" y="266" class="small">accuracy, flips, safety</text>
+
+  <!-- Left column: case studies -->
+  <rect x="70" y="335" width="560" height="635" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="105" y="378" class="panel-title">Case-Study Settings</text>
+  <text x="105" y="406" class="small">Each task has a distinct privileged action space and trusted context.</text>
+
+  <rect x="105" y="440" width="490" height="150" rx="14" fill="#ffffff" stroke="#dbe4ee" stroke-width="1.4"/>
+  <rect x="105" y="440" width="8" height="150" rx="4" fill="#2563eb"/>
+  <text x="135" y="474" class="card-title">Robot Motion Control</text>
+  <text x="135" y="508" class="label">ACTIONS</text>
+  <text x="225" y="508" class="body">continue, halt, reroute, request confirmation</text>
+  <text x="135" y="544" class="label">STATE</text>
+  <text x="225" y="544" class="body">role, mode, estop, path blocked, allowed routes</text>
+
+  <rect x="105" y="620" width="490" height="150" rx="14" fill="#ffffff" stroke="#dbe4ee" stroke-width="1.4"/>
+  <rect x="105" y="620" width="8" height="150" rx="4" fill="#059669"/>
+  <text x="135" y="654" class="card-title">Industrial Valve Control</text>
+  <text x="135" y="688" class="label">ACTIONS</text>
+  <text x="225" y="688" class="body">open, close, hold, vent, request confirmation</text>
+  <text x="135" y="724" class="label">STATE</text>
+  <text x="225" y="724" class="body">role, pressure, shutdown, leak, lock, authorized valves</text>
+
+  <rect x="105" y="800" width="490" height="135" rx="14" fill="#ffffff" stroke="#dbe4ee" stroke-width="1.4"/>
+  <rect x="105" y="800" width="8" height="135" rx="4" fill="#b45309"/>
+  <text x="135" y="834" class="card-title">Building Access Control</text>
+  <text x="135" y="868" class="label">ACTIONS</text>
+  <text x="225" y="868" class="body">grant access, deny, lockdown, evacuate, request confirmation</text>
+  <text x="135" y="904" class="label">STATE</text>
+  <text x="225" y="904" class="body">role, badge, alarms, lockdown, zone authorization</text>
+
+  <!-- Middle column: systems and models -->
+  <rect x="685" y="335" width="560" height="635" rx="18" fill="#ecfeff" stroke="#a5f3fc" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="720" y="378" class="panel-title">Systems Compared</text>
+  <text x="720" y="406" class="small">All six variants are evaluated in each case-study setting.</text>
+
+  <rect x="720" y="440" width="230" height="82" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="745" y="472" class="card-title">ABCI</text>
+  <text x="745" y="499" class="small">parser, validator, decision</text>
+
+  <rect x="980" y="440" width="230" height="82" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="1005" y="472" class="card-title">Deterministic Policy</text>
+  <text x="1005" y="499" class="small">grammar rules, no model</text>
+
+  <rect x="720" y="550" width="230" height="82" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="745" y="582" class="card-title">LLM Assist</text>
+  <text x="745" y="609" class="small">model proposal, rule approval</text>
+
+  <rect x="980" y="550" width="230" height="82" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="1005" y="582" class="card-title">Direct Decision</text>
+  <text x="1005" y="609" class="small">model selects final action</text>
+
+  <rect x="720" y="660" width="230" height="82" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="745" y="692" class="card-title">Role Separated</text>
+  <text x="745" y="719" class="small">trusted-state priority prompt</text>
+
+  <rect x="980" y="660" width="230" height="82" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="1005" y="692" class="card-title">Schema Constrained</text>
+  <text x="1005" y="719" class="small">structured output prompt</text>
+
+  <rect x="720" y="790" width="490" height="135" rx="14" fill="#ffffff" stroke="#bae6fd" stroke-width="1.4"/>
+  <text x="745" y="824" class="card-title">Model Settings</text>
+  <text x="745" y="855" class="body">Model-backed variants use four 1B-class instruction models.</text>
+  <text x="745" y="883" class="body">Models are loaded and warmed up before timed evaluation.</text>
+  <text x="745" y="911" class="small">The deterministic policy is the model-free baseline.</text>
+
+  <!-- Right column: clarity boxes and measures -->
+  <rect x="1300" y="335" width="530" height="635" rx="18" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1335" y="378" class="panel-title">What Is Measured</text>
+  <text x="1335" y="406" class="small">Outputs are summarized overall and by attack family.</text>
+
+  <rect x="1335" y="440" width="460" height="126" rx="14" fill="#ffffff" stroke="#fde68a" stroke-width="1.4"/>
+  <text x="1360" y="474" class="card-title">Attack Families</text>
+  <text x="1360" y="506" class="body">Direct override, role confusion, indirect injection,</text>
+  <text x="1360" y="532" class="body">compositional multi-field attacks, and adaptive attacks.</text>
+
+  <rect x="1335" y="595" width="460" height="200" rx="14" fill="#ffffff" stroke="#fde68a" stroke-width="1.4"/>
+  <text x="1360" y="629" class="card-title">Primary Outcome Measures</text>
+  <rect x="1360" y="655" width="132" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1383" y="679" class="pill">Clean accuracy</text>
+  <rect x="1505" y="655" width="168" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1525" y="679" class="pill">Adversarial accuracy</text>
+  <rect x="1685" y="655" width="78" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1708" y="679" class="pill">AER</text>
+
+  <rect x="1360" y="710" width="86" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1384" y="734" class="pill">PAFR</text>
+  <rect x="1460" y="710" width="128" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1482" y="734" class="pill">Safe reject</text>
+  <rect x="1602" y="710" width="72" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1625" y="734" class="pill">HTR</text>
+  <rect x="1688" y="710" width="92" height="38" rx="19" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="1708" y="734" class="pill">Latency</text>
+
+  <rect x="1335" y="825" width="460" height="100" rx="14" fill="#ffffff" stroke="#fde68a" stroke-width="1.4"/>
+  <text x="1360" y="859" class="card-title">Interpretation</text>
+  <text x="1360" y="891" class="body">A robust system preserves the intended action under attack</text>
+  <text x="1360" y="917" class="body">while avoiding unsafe privileged actions.</text>
+
+  <!-- cross-panel arrows -->
+  <path class="arrow" d="M630 660 C650 660, 665 660, 685 660"/>
+  <path class="arrow" d="M1245 660 C1265 660, 1280 660, 1300 660"/>
+  <text x="646" y="636" class="small">same protocol</text>
+  <text x="1258" y="636" class="small">outputs scored</text>
+
+  <!-- footer note -->
+  <rect x="70" y="1030" width="1760" height="62" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="105" y="1060" class="card-title">Figure summary</text>
+  <text x="260" y="1060" class="body">Each trial asks whether a decision strategy can map untrusted text to the correct privileged action,</text>
+  <text x="260" y="1086" class="body">without being redirected by adversarial content or producing unsafe behavior.</text>
+</svg>
