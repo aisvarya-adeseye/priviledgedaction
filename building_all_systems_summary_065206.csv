@@ -1,2 +1,0 @@
-system,model,n,clean_accuracy,adversarial_accuracy,aer,pafr,safe_reject_rate,clean_htr,adv_htr,overall_htr,median_clean_latency_ms,median_adv_latency_ms,median_latency_ms
-deterministic_grammar_policy,deterministic,5,1.0,0.6,0.4,0.4,0.0,0.0,0.0,0.0,0.05540001438930631,0.042199972085654736,0.04930002614855766

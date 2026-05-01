@@ -1,7 +1,0 @@
-label,n,clean_accuracy,adversarial_accuracy,aer,pafr,clean_fallback_rate,adv_fallback_rate,safe_reject_rate,clean_htr,adv_htr,overall_htr,median_clean_latency_ms,median_adv_latency_ms,median_latency_ms,clean_accuracy_ci_low,clean_accuracy_ci_high,adversarial_accuracy_ci_low,adversarial_accuracy_ci_high,aer_ci_low,aer_ci_high,pafr_ci_low,pafr_ci_high,safe_reject_rate_ci_low,safe_reject_rate_ci_high,clean_htr_ci_low,clean_htr_ci_high,adv_htr_ci_low,adv_htr_ci_high,overall_htr_ci_low,overall_htr_ci_high
-abci | Qwen/Qwen3-1.7B,5,0.8,0.4,0.6,0.4,0.0,0.0,0.0,0.0,0.0,0.0,48775.27,48841.601,48824.8145,0.4,1.0,0.0,0.8,0.2,1.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-deterministic_grammar_policy | deterministic,5,0.6,0.2,0.8,0.4,0.0,0.0,0.0,0.0,0.0,0.0,0.04,0.016,0.033,0.2,1.0,0.0,0.6,0.4,1.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-direct_decision | Qwen/Qwen3-1.7B,5,0.6,0.2,0.8,0.4,0.0,0.0,0.0,0.0,0.0,0.0,8688.227,8828.983,8715.075,0.2,1.0,0.0,0.6,0.4,1.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-llm_assist_rule_approval | Qwen/Qwen3-1.7B,5,0.8,0.2,0.8,0.6,0.0,0.0,0.0,0.0,0.0,0.0,30123.245,27589.369,29409.206,0.4,1.0,0.0,0.6,0.4,1.0,0.2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-role_separated | Qwen/Qwen3-1.7B,5,0.8,0.2,0.8,0.6,0.0,0.0,0.0,0.0,0.0,0.0,9930.154,10007.098,9959.804,0.4,1.0,0.0,0.6,0.4,1.0,0.2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-schema_constrained | Qwen/Qwen3-1.7B,5,0.8,0.4,0.6,0.4,0.0,0.0,0.0,0.0,0.0,0.0,55257.373,55413.236,55295.8495,0.4,1.0,0.0,0.8,0.2,1.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

@@ -47,7 +47,7 @@ class RobotAdapter(DomainAdapter):
                 "evidence": list | None,
             }
 
-        For now, only a small subset is enforced:
+         A small subset is enforced:
           - "verb" must exist and be allowed
           - "target" is optional
           - "params" is optional but, if present, must be a dict

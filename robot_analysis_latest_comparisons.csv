@@ -1,6 +1,0 @@
-reference,other,adv_correct_b01,adv_correct_b10,adv_correct_p_value,flip_b01,flip_b10,flip_p_value,adv_htr_b01,adv_htr_b10,adv_htr_p_value,latency_p_value
-abci | Qwen/Qwen3-1.7B,direct_decision | Qwen/Qwen3-1.7B,0,1,1.0,0,0,1.0,0,0,1.0,0.0625
-abci | Qwen/Qwen3-1.7B,schema_constrained | Qwen/Qwen3-1.7B,0,0,1.0,0,0,1.0,0,0,1.0,0.0625
-abci | Qwen/Qwen3-1.7B,role_separated | Qwen/Qwen3-1.7B,0,1,1.0,1,0,1.0,0,0,1.0,0.0625
-abci | Qwen/Qwen3-1.7B,llm_assist_rule_approval | Qwen/Qwen3-1.7B,0,1,1.0,1,0,1.0,0,0,1.0,0.125
-abci | Qwen/Qwen3-1.7B,deterministic_grammar_policy | deterministic,0,1,1.0,0,0,1.0,0,0,1.0,0.0625
